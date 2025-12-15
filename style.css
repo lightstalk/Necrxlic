@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #000;
+    background: radial-gradient(circle at center, #111827 10%, #000 85%);
+    color: #fff;
+    margin: 0;
+    filter: blur(50px);
+    transform: scale(1.15);
+    min-height: 100vh;
+    animation: entrar 2s ease-in-out forwards;
+    scrollbar-width: none;
+}
+::selection {
+    color: black;
+    background-color: red;
+}
+a {
+    color: red;
+}
+
+
+@keyframes entrar {
+    to {
+        filter: blur(0px);
+        transform: scale(1);
+    }
+}
+
+.header h1 {
+    transition: all .5s ease-in-out;
+    text-shadow: 0 0 5px #111827;
+
+}
+
+span {
+    transition: all 1.5s;
+    color: rgb(0, 132, 255);
+
+}
+
+span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: red;
+}
+
+.header h1:hover {
+    transform: scale(1.05);
+    cursor: default;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: all .75s ease-in-out;
+}
+
+.logo-ncrxlc {
+    cursor: default;
+    transform: scale(1);
+    transition: all .75s ease-in-out;
+
+}
+
+.logo-ncrxlc:hover {
+    cursor: default;
+    transform: scale(1.1);
+}
+
+
+.creation-text {
+    user-select: none;
+}
+
+.example_divs {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .75s ease-in-out;
+}
+
+.smile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.example_divs.visible {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.example_divs img {
+    width: 200px;
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.header p {
+    color: #9ca3af;
+}
+
+.variant-selector {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 56rem;
+    margin: 0 auto 4rem;
+}
+
+@media (min-width: 768px) {
+    .variant-selector {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+.variant-btn:hover {
+    border-color: #4b5563;
+}
+
+.variant-btn.active {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.variant-name {
+    font-size: 0.875rem;
+    opacity: 0.5;
+    margin-bottom: 0.5rem;
+}
+
+.variant-desc {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* Logo Display */
+.logo-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.logo-svg {
+    display: block;
+}
+
+.logo-svg.small {
+    width: 80px;
+    height: 80px;
+}
+
+.logo-svg.medium {
+    width: 160px;
+    height: 160px;
+}
+
+.logo-svg.large {
+    width: 320px;
+    height: 320px;
+}
+
+
+.showcase {
+    margin-top: 4rem;
+}
+
+.showcase-section {
+    margin-bottom: 4rem;
+    user-select: none;
+}
+
+.showcase-section h2 {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.context-examples {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .context-examples {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.context-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background: linear-gradient(to bottom right, #111827, #000);
+    border: 1px solid #1f2937;
+    height: 175px;
+    gap: 100px;
+    padding: 20px;
+
+}
+
+.red,
+.white,
+.purple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+}
+
+.red {
+    background: red;
+    width: 120px;
+    max-height: 120px;
+}
+
+.red img {
+    width: 120px;
+    height: auto;
+}
+
+.white {
+    background: white;
+    width: 120px;
+    max-height: 120px;
+}
+
+.white img {
+    width: 125px;
+    height: auto;
+}
+
+
+.purple {
+    background: radial-gradient(circle at center, purple, rgb(44, 0, 44));
+    width: 120px;
+    max-height: 120px;
+}
+
+.purple img {
+    width: 125px;
+    height: 100px;
+}
+
+
+.profile-example {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-name {
+    font-weight: bold;
+}
+
+.profile-label {
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
+
+.header-example {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.header-text {
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+}
+
+.context-label {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
+
+#aphex-logo img {
+    height: 150px;
+    width: 200px;
+
+}
